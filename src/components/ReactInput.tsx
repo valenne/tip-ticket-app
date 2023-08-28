@@ -27,7 +27,7 @@ export function ReactInput({ label, id, parameters, type, getBill, getPeople }: 
 					{parameters === 'people' && <PersonIcon />}
 				</i>
 				<input
-					className=' min-w-full bg-[#F4FAFA] dark:bg-[#5E7A7D] dark:text-[#F4FAFA] text-2xl font-extrabold text-right tracking-wide text-[#00494D] py-2 px-4 rounded-lg caret-[#26C0AB] dark:caret-black focus:outline-[#26C0AB] dark:outline-black'
+					className=' min-w-full bg-[#F4FAFA] dark:bg-[#637274] dark:text-[#C5E4E7] text-2xl font-extrabold text-right tracking-wide text-[#00494D] py-2 px-4 rounded-lg caret-[#26C0AB] dark:caret-[#C5E4E7] focus:outline-[#26C0AB] dark:outline-[#C5E4E7]'
 					type={type}
 					onChange={parameters === 'bill' ? getBill : getPeople}
 				/>
@@ -47,13 +47,13 @@ export function ReactInputTip({
 	return (
 		<div
 			className={`w-full rounded-lg cursor-pointer  transition-all duration-150 ease-in ${
-				isActive ? 'bg-[#26C0AB]' : 'bg-[#00494D] dark:bg-black'
+				isActive ? 'bg-[#26C0AB]' : 'bg-[#00494D] dark:bg-[#94ABAD]'
 			}`}
 			key={value}
 			id={id}
 			onClick={onClick}>
 			<span
-				className={`inputTip w-full block text-2xl font-extrabold text-center text-centertracking-wide text-[#FFFFFF] p-4  caret-[#26C0AB] `}
+				className={`inputTip w-full block text-2xl font-extrabold text-center text-centertracking-wide text-[#FFFFFF] dark:text-[#000] p-4  caret-[#26C0AB] `}
 				aria-valuetext={type === 'button' ? value : ''}
 				onClick={getTip}>
 				{value}

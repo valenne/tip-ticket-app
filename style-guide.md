@@ -22,6 +22,14 @@ The designs were created to the following widths:
 - Very light grayish cyan: #F4FAFA
 - White: #FFFFFF
 
+### Dark Mode
+
+- dark_1 : #000000
+- dark_2 : #31393A
+- dark_3 : #637274
+- dark_4 : #94ABAD
+- dark_5 : #C5E4E7
+
 ## Typography
 
 ### Body Copy

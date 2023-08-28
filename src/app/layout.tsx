@@ -1,7 +1,7 @@
-'use client';
 import type { Metadata } from 'next';
 import { Space_Mono } from 'next/font/google';
-import { useState } from 'react';
+import { ThemeSwitcher } from '../components/ThemeSwitcher';
+import { ThemeProvider } from '../components/provider/theme-provider';
 import './globals.css';
 
 const spaceMono = Space_Mono({ weight: ['700'], subsets: ['latin'] });
@@ -12,16 +12,8 @@ export const metadata: Metadata = {
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
-	const [theme, setTheme] = useState<boolean>(false);
-
-	const changePageTheme = () => {
-		setTheme(!theme);
-	};
-
 	return (
-		<html
-			lang='en'
-			className={`${theme ? 'dark' : ''}`}>
+		<html lang='en'>
 			<head>
 				<link
 					rel='icon'
@@ -30,14 +22,13 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 			</head>
 			<body className={`${spaceMono.className} bg-[#C5E4E7] dark:bg-black`}>
 				<main>
-					<div className='block fixed top-2  ml-2 z-50'>
-						<button
-							className='bg-[#00494D] text-[#F4FAFA] px-4 py-2 rounded-lg left'
-							onClick={changePageTheme}>
-							{theme ? '🌞' : '🌙'}
-						</button>
-					</div>
-					{children}
+					<ThemeProvider
+						attribute='class'
+						defaultTheme='system'
+						enableSystem>
+						<ThemeSwitcher />
+						{children}
+					</ThemeProvider>
 				</main>
 			</body>
 		</html>

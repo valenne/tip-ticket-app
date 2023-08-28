@@ -19,12 +19,12 @@ export default function Home() {
 		<section
 			id='section-form'
 			className='mx-5 grid place-content-center h-screen'>
-			<div className='w-full my-10'>
-				<h1 className='text-3xl font-extrabold text-center uppercase dark:text-[#F4FAFA]'>
+			<div className='w-full my-10 relative'>
+				<h1 className='text-3xl font-extrabold text-center uppercase dark:text-[#C5E4E7]'>
 					Tip Calculator 💁‍♂️
 				</h1>
 			</div>
-			<div className='bg-[#FFFFFF] dark:bg-[#00494D] dark:text-[#C5E4E7] rounded-2xl p-8 text-[#5E7A7D]'>
+			<div className='bg-[#FFFFFF] dark:bg-[#31393A] dark:text-[#C5E4E7] rounded-2xl p-8 text-[#5E7A7D]'>
 				<form>
 					<div className='mb-10'>
 						<ReactInput
@@ -54,7 +54,7 @@ export default function Home() {
 								<input
 									type='number'
 									placeholder='Custom'
-									className='w-full text-right bg-[#F4FAFA] dark:bg-[#5E7A7D] dark:text-[#F4FAFA] text-2xl font-extrabold text-centertracking-wide text-[#00494D] p-4 rounded-lg transition-colors duration-150 ease-in caret-[#26C0AB] dark:caret-black focus:outline-[#26C0AB] dark:focus:outline-black dark:placeholder:text-[#C5E4E7]'
+									className='w-full text-right bg-[#F4FAFA] dark:bg-[#637274] dark:text-[#C5E4E7] text-2xl font-extrabold text-centertracking-wide text-[#00494D] p-4 rounded-lg transition-colors duration-150 ease-in caret-[#26C0AB] dark:caret-[#C5E4E7] focus:outline-[#26C0AB] dark:outline-[#C5E4E7] dark:placeholder:text-[#C5E4E7] dark:placeholder:opacity-40'
 									onChange={handleSelectOnClickTip}
 								/>
 							</div>
