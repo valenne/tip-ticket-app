@@ -1,3 +1,44 @@
 {
-  "extends": "next/core-web-vitals"
+  "root": true,
+  "parser": "@typescript-eslint/parser",
+  "plugins": [
+    "@typescript-eslint"
+  ],
+  "extends": [
+    "plugin:@shopify/esnext",
+    "eslint:recommended",
+    "plugin:@typescript-eslint/eslint-recommended",
+    "plugin:@typescript-eslint/recommended"
+  ],
+  "rules": {
+    "semi": [
+      "warn",
+      "always"
+    ],
+    "no-extra-semi": "error",
+    "indent": [
+      1,
+      2
+    ],
+    "no-trailing-spaces": [
+      "error",
+      {
+        "skipBlankLines": false
+      }
+    ],
+    "no-multiple-empty-lines": [
+      "error",
+      {
+        "max": 1
+      }
+    ],
+    "no-console": "off",
+    "jsx-quotes": [
+      "error",
+      "prefer-single"
+    ]
+  },
+  "parserOptions": {
+    "project": "tsconfig.json"
+  }
 }
