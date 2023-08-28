@@ -9,7 +9,7 @@ type InputProps = {
 	label?: string;
 	value?: string;
 	getBill?: (e: React.ChangeEvent<HTMLInputElement>) => void;
-	getTip?: ((e: React.MouseEvent<HTMLElement>) => void) | undefined;
+	getTip?: any;
 	getPeople?: ((e: React.ChangeEvent<HTMLInputElement>) => void) | undefined;
 	onClick?: any;
 	isActive?: boolean;

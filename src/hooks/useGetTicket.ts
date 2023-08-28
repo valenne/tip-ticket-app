@@ -17,9 +17,7 @@ export function useGetTicket() {
 		setTicket({ ...ticket, bill: billToPay });
 	};
 
-	const handleSelectOnClickTip = (
-		e: React.MouseEvent<HTMLElement> | React.ChangeEvent<HTMLInputElement>
-	) => {
+	const handleSelectOnClickTip = (e: React.ChangeEvent<HTMLTextAreaElement | HTMLInputElement>) => {
 		const selectedTip =
 			Number(e.currentTarget.textContent?.replace('%', '')) ||
 			Number(e.target.value.replace('%', ''));
